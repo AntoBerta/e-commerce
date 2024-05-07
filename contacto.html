@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Productos para el cuidado de la piel masculina">
+  <meta name="keywords" content="loreal,piel,limpieza,mascarilla,crema,hombre, cuidado facial">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e4361d6d35.js" crossorigin="anonymous"></script>
+  <title>Contacto</title>
+
+</head>
+
+<body>
+  <header>
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="logo">
+            <a href="index.html">
+              <h1><span>L´</span>orÉal <span>Men</span>Expert</h1>
+            </a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="index.html" data-after="Home">Home</a></li>
+              <li><a href="cuidadofacial.html" data-after="Facial">Cuidado Facial</a></li>
+              <li><a href="higiene.html" data-after="Higiene">Higiene</a></li>
+              <li><a href="barber-club.html" data-after="Barber">Barber Club</a></li>
+              <li><a href="contacto.html" class="actual" data-after="Contacto">Contacto</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+  <section id="banner_contacto">
+    <div class="hero container">
+
+    </div>
+  </section>
+
+  <div class="row" id="boxes">
+    <div style="">
+
+      <!-- modify this form HTML and place wherever you want your form -->
+<form id="my-form" action="https://formspree.io/f/xvoywzpz" method="POST">
+  <label>Ingrese su nombre:</label>
+  <input id="nombre" name="nombre" placeholder="Nombre" required>
+  <label>Ingrese su mail:</label>
+  <input id="email" name="email" type="email" placeholder="ejemplo@email.com" required>
+  <label>Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
+  
+  <br>
+    <input id="submit" name="submit" type="submit" value="Enviar" required>
+  </button>
+  
+  <p id="my-form-status"></p>
+</form>
+<!-- Place this script at the end of the body tag -->
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Mensaje enviado, en breve le responderemos.";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13145.11833355628!2d-58.4585372!3d-34.5464759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffc6e9f1e0d8dacd!2sL&#39;Or%C3%A9al%20Argentina!5e0!3m2!1ses!2sar!4v1665522667443!5m2!1ses!2sar"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="row">
+        <div class="footer_col">
+          <h4>Alumnos</h4>
+          <ul>
+            <li><a href="#">Antonela Lucia Bertarini</a></li>
+            <li><a href="#">Gonzalo Battista</a></li>
+            <li><a href="#">Santiago Ricardo Jorge</a></li>
+
+          </ul>
+        </div>
+        <div class="footer_col">
+          <h4>Carrera</h4>
+          <ul>
+            <li><a href="#">Desarrollo FullStack</a></li>
+          </ul>
+        </div>
+        <div class="footer_col">
+          <h4>Catedra</h4>
+          <ul>
+            <li><a href="#">Codo a Codo 22511</a></li>
+            <li><a href="#">Prof. Arturo Grottoli</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="redes_soc">
+      <a href="https://es-la.facebook.com/lorealmenexpert/" target="_blank" rel="noopener noreferer"><img
+          src="imagenes/redes/fa.png" alt="icono facebook"></a>
+    </div>
+    <div class="redes_soc">
+      <a href="https://twitter.com/lorealmenexpert?lang=es" target="_blank" rel="noopener noreferer"><img
+          src="imagenes/redes/tw.png" alt="icono twitter"></a>
+    </div>
+    <div class="redes_soc">
+      <a href="https://www.youtube.com/user/lorealparisargentina" target="_blank" rel="noopener noreferer"><img
+          src="imagenes/redes/you.png" alt="icono youtube"></a>
+    </div>
+    <div class="redes_soc">
+      <a href="https://www.instagram.com/lorealmenexpertunofficial/?hl=es" target="_blank" rel="noopener noreferer"><img
+          src="imagenes/redes/ins.png" alt="icono instagram"></a>
+    </div>
+
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
