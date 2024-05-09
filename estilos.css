@@ -367,8 +367,24 @@ video{
     font-family: 'Montserrat';
     text-align: center;
 }
+.formSucripcion  {
 
+    width: 80%;
+    margin: 40px auto 40px auto;
+    border:black 1px solid;
+    padding: 2px 2px;
+    display:grid;
+    grid-template-areas: "top1 top2 top3"
+    "middel middel middel"
+    "bottom bottom bottom";
+    grid-template-rows: auto 1fr auto;
 
+}
+
+.formSucripcion #namesuscrip1 {
+    grid-area: "top1";
+
+}
 /*productos seccion*/
 .contenedor_productos{
     display: flex;
