@@ -326,6 +326,15 @@ p{
 	padding: 0 50px;
 	justify-content: flex-start;
 }
+#banner_suscripcion{        
+    background-image: url(imagenes/banner/inscripciones.jpg);
+    background-color:black;
+	background-size:cover;    
+	background-position: top center;
+	position: relative;
+	z-index: -1;
+
+}
 
 #hero{
     min-height: 100vh;
@@ -367,24 +376,8 @@ video{
     font-family: 'Montserrat';
     text-align: center;
 }
-.formSucripcion  {
 
-    width: 80%;
-    margin: 40px auto 40px auto;
-    border:black 1px solid;
-    padding: 2px 2px;
-    display:grid;
-    grid-template-areas: "top1 top2 top3"
-    "middel middel middel"
-    "bottom bottom bottom";
-    grid-template-rows: auto 1fr auto;
 
-}
-
-.formSucripcion #namesuscrip1 {
-    grid-area: "top1";
-
-}
 /*productos seccion*/
 .contenedor_productos{
     display: flex;
@@ -777,3 +770,92 @@ h1 .section-title{
         margin-bottom: 30px;
 }
 } 
+
+/*pagina de contacto*/
+.form__container{
+    max-width: 50%;
+    margin: auto auto;
+    background-color: #fff;
+    padding: auto;
+    border-radius: auto;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 2);
+}
+
+h1 {
+    text-align: center;
+}
+
+.subscription-form {
+    margin-top: 0.5rem;
+}
+
+.form-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex-basis: 45%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {    
+    font-weight: bold;
+}
+
+
+input[type="firstname"],
+input[type="address"],
+input[type="telefono"],
+input[type="lastname"],
+input[type="zipcode"],
+input[type="country"] ,
+input[type="emails"] ,
+input[type="dateofbirth"] ,
+textarea {
+    width: 100%;       
+    border-radius: 1.5rem;
+    background:#383838;
+    border:2px solid #f6f6f6;
+    padding:10px;
+    margin-top:5px;
+    font-size:15px;
+    color:white;
+}
+
+button {    
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: #716d6d;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Centrar el formulario */
+.subscription-form {
+    width: 800px;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex-basis: 100%; /* Cambia el ancho de las columnas a 100% en dispositivos pequeños */
+    }
+}
