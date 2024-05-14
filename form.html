@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e4361d6d35.js" crossorigin="anonymous"></script>
-  <title>Suscripcion</title>
+  <title>Formulario</title>
 
 </head>
 
@@ -49,34 +49,15 @@
           
         </div>
       </section>
-
-      <section id="boxes">
-        <div class="contenedor">
-            <h1>¿Por qué deberías unirte a la familia L'Oréal?</h1>
-            <hr>                
-            <p> Al suscribirte, tendrás acceso anticipado a nuestros últimos lanzamientos y productos exclusivos.<br>
-              Cuidado Personalizado: Reconocemos que cada tipo de cabello es único, y es por eso que ofrecemos una gama 
-              diversa de productos adaptados a tus necesidades individuales. Ya sea que busques hidratación, reparación o volumen, 
-              tenemos la solución perfecta para ti.<br>
-              Comunidad Apasionada: Al unirte a nuestra comunidad de suscriptores, te conviertís en parte de una red global de amantes del cabello que comparten tus mismas pasiones y preocupaciones. 
-              Obtén consejos y trucos de expertos, comparte tus experiencias y forma parte de conversaciones significativas sobre belleza y cuidado personal.
-              Beneficios Exclusivos: Como miembro de nuestro programa de membresía, disfrutarás de beneficios exclusivos, 
-              que incluyen descuentos especiales, regalos sorpresa y acceso a eventos VIP. Además, recibirás contenido inspirador y educativo directamente en tu bandeja de entrada para mantenerte al día con las últimas tendencias y técnicas de cuidado del cabello.
-              En L'Oréal, creemos que la belleza es mucho más que una apariencia; es una expresión de tu identidad y confianza en ti misma. 
-              Únete a nosotros en nuestro viaje para descubrir la belleza que hay en ti y experimentar la diferencia L'Oréal en tu vida diaria.
-              ¡Suscríbete hoy mismo y déjanos ser tu compañero de confianza en tu viaje hacia el cabello hermoso y saludable!
-         .</p>
-        </div>
-      </section>  
        
-<div class="form__container">     
+<div class="form-container">     
   
   <form class="subscription-form" action="https://formspree.io/f/xvoywzpz" method="POST">
-      <div class="form-columns">
-            <section class="column">
+      <div class="form-top">
+            <section class="left">
               <div class="form-group">
                 <label for="firstname" class="form__label" >Nombre:</label>
-                <input size="30" type="text" id="firsname"  name="firsname" placeholder="Ingrese su Nombre aqui..." tabindex="1" >                        
+                <input size="30" type="text" id="firstname"  name="firstname" placeholder="Ingrese su Nombre aqui..." tabindex="1" >                        
               </div>
 
               <div class="form-group">
@@ -91,11 +72,11 @@
 
               <div class="form-group">
                 <label for="telefono" >Telefono: </label>
-                <input type="tel" id=="telefono" name="telefono" placeholder="Ingrese su telefono aqui ...." tabindex="7"/>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su telefono aqui ...." tabindex="7"/>
               </div>
 
             </section>
-            <section class="column">
+            <section class="right">
                   <div class="form-group">
                     <label for="lastname" class="form__label"  >Apellido:</label>
                     <input size="30" type="text" id ="lastname" name="lastname" placeholder="Ingrese su apellido aqui..." tabindex="2"/>                        
@@ -115,9 +96,9 @@
             </sections>  
 
       </div>
-      <div class="form-group">
-        <label class="form__label" for="comentarios">Comentarios:</label> 
-        <textarea class="form__input--textarea" id="comentarios"  name="comentarios" rows="0" cols="1" tabindex="9"> </textarea>  
+      <div class="form-bottom">
+        <label class="form--label" for="comentarios">Comentarios:</label> 
+        <textarea class="form--input--textarea" id="comentarios"  name="comentarios" tabindex="9"> </textarea>  
         <br>
         <input id="submit" id=submitsuscripcion name="submitsuscripcion" type="submit" value="Enviar" required tabindex="10"/>
     </div>    

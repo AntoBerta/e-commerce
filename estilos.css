@@ -619,7 +619,38 @@ textarea {
     }
 }
 
+/*pagina de contacto Form*/
 
+/* Centrar el formulario */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+.form-top{
+    display: flex;
+    justify-content: space-around;
+}
+.form-top .left{
+    padding-right: 5rem;
+}
+.form-top input{
+    height: 5rem;
+}
+.form-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem; 
+}
+.form-bottom .form--label{
+    width: 100%;
+}
+.form-bottom .form--input--textarea{
+    width: 100%;
+}
 
 @media only screen and (min-width:768px){
     .cta{
@@ -769,90 +800,7 @@ h1 .section-title{
         width: 70%;
         margin-bottom: 30px;
 }
-} 
-
-/*pagina de contacto*/
-.form__container{
-    max-width: 50%;
-    margin: auto auto;
-    background-color: #fff;
-    padding: auto;
-    border-radius: auto;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 2);
 }
-
-h1 {
-    text-align: center;
-}
-
-.subscription-form {
-    margin-top: 0.5rem;
-}
-
-.form-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.column {
-    flex-basis: 45%;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {    
-    font-weight: bold;
-}
-
-
-input[type="firstname"],
-input[type="address"],
-input[type="telefono"],
-input[type="lastname"],
-input[type="zipcode"],
-input[type="country"] ,
-input[type="emails"] ,
-input[type="dateofbirth"] ,
-textarea {
-    width: 100%;       
-    border-radius: 1.5rem;
-    background:#383838;
-    border:2px solid #f6f6f6;
-    padding:10px;
-    margin-top:5px;
-    font-size:15px;
-    color:white;
-}
-
-button {    
-    width: 100%;
-    padding: 1rem;
-    background-color: #007bff;
-    color: #716d6d;
-    border: none;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Centrar el formulario */
-.subscription-form {
-    width: 800px;
-    text-align: left;
-    margin-top: 25px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;}
 
 @media screen and (max-width: 600px) {
     .column {
