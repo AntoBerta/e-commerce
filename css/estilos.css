@@ -11,7 +11,9 @@ html {
   font-family: "montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+h2{
 
+}
 a {
   text-decoration: none;
 }
@@ -354,7 +356,7 @@ video {
   width: 80%;
   margin: auto;
 }
-#boxes .contenedor h1 {
+#boxes .contenedor h2 {
   font-size: 50px;
   margin: 0;
   padding-top: 30px;
