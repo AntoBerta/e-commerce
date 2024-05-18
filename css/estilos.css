@@ -251,6 +251,16 @@ p{
 	position: relative;
 	z-index: -1;
 }
+#banner_suscripcion{        
+    background-image: url(/imagenes/banner/inscripciones.jpg);
+    background-color:black;
+	background-size:cover;    
+	background-position: top center;
+	position: relative;
+	z-index: -1;
+
+}
+
 #banner::after{
 	content: '';
 	position: absolute;
@@ -325,15 +335,6 @@ p{
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
-}
-#banner_suscripcion{        
-    background-image: url(imagenes/banner/inscripciones.jpg);
-    background-color:black;
-	background-size:cover;    
-	background-position: top center;
-	position: relative;
-	z-index: -1;
-
 }
 
 #hero{
