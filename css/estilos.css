@@ -194,7 +194,7 @@ p{
 /* banner Seccion */
 
 #banner {
-	background-image: url(/imagenes/banner/menexperthome.jpeg);
+	background-image: url(../imagenes/banner/menexperthome.jpeg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -203,7 +203,7 @@ p{
     display: block;
 }
 #banner_cuidadofacial{
-    background-image: url(/imagenes/banner/cuidadofacial.jpg);
+    background-image: url(../imagenes/banner/cuidadofacial.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -211,7 +211,7 @@ p{
 }
 
 #banner_higiene{
-    background-image: url(/imagenes/banner/higiene.jpg);
+    background-image: url(../imagenes/banner/higiene.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -219,7 +219,7 @@ p{
 }
 
 #banner_limpiezafacial{
-    background-image: url(/imagenes/banner/limpiezafacial.png);
+    background-image: url(../imagenes/banner/limpiezafacial.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -228,7 +228,7 @@ p{
 }
 
 #banner_cremafacial{
-    background-image: url(/imagenes/banner/cremafacial.jpg);
+    background-image: url(../imagenes/banner/cremafacial.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -237,7 +237,7 @@ p{
 }
 
 #banner_vitaLift{
-    background-image: url(/imagenes/banner/vitalift2.jpg);
+    background-image: url(../imagenes/banner/vitalift2.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -245,14 +245,14 @@ p{
    
 }
 #banner_contacto{
-    background-image: url(/imagenes/banner/mundo.png);
+    background-image: url(../imagenes/banner/mundo.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: -1;
 }
 #banner_suscripcion{        
-    background-image: url(/imagenes/banner/inscripciones.jpg);
+    background-image: url(../imagenes/banner/inscripciones.jpg);
     background-color:black;
 	background-size:cover;    
 	background-position: top center;
