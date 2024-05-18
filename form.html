@@ -16,118 +16,144 @@
 </head>
 
 <body>
-    <header>
-        <section id="header">
-         <div class="header container">
-           <div class="nav-bar">
-             <div class="logo">
-               <a href="index.html">
-                 <h1><span>L´</span>orÉal <span>Men</span>Expert</h1>
-               </a>
-             </div>
-             <div class="nav-list">
-               <div class="hamburger">
-                 <div class="bar"></div>
-               </div>
-               <ul>
-                 <li><a href="index.html" data-after="Home">Home</a></li>
-                 <li><a href="index.html"data-after="Facial">Cuidado Facial</a></li>
-                 <li><a href="higiene.html" class="actual" data-after="Higiene">Higiene</a></li>
-                 <li><a href="barber-club.html" data-after="Barber">Barber Club</a></li>
-                 <li><a href="contacto.html" data-after="Contacto">Contacto</a></li>
-                 
-               </ul>
-             </div>
-           </div>
-         </div>
-       </section>
-       </header>
+  <header>
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="logo">
+            <a href="index.html">
+              <h1><span>L´</span>orÉal <span>Men</span>Expert</h1>
+            </a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="index.html" data-after="Home">Home</a></li>
+              <li><a href="index.html" data-after="Facial">Cuidado Facial</a></li>
+              <li><a href="higiene.html" class="actual" data-after="Higiene">Higiene</a></li>
+              <li><a href="barber-club.html" data-after="Barber">Barber Club</a></li>
+              <li><a href="contacto.html" data-after="Contacto">Contacto</a></li>
 
-       <section id="banner_suscripcion">
-        <div class="hero container">
-          
+            </ul>
+          </div>
         </div>
-      </section>
-       
-<div class="form-container">     
-  
-  <form class="subscription-form" action="https://formspree.io/f/xvoywzpz" method="POST">
+      </div>
+    </section>
+  </header>
+
+  <section id="banner_suscripcion">
+    <div class="hero container">
+
+    </div>
+  </section>
+
+  <div class="form-container">
+
+    <form class="subscription-form" action="https://formspree.io/f/xvoywzpz" method="POST">
       <div class="form-top">
-            <section class="left">
-              <div class="form-group">
-                <label for="firstname" class="form__label" >Nombre:</label>
-                <input size="30" type="text" id="firstname"  name="firstname" placeholder="Ingrese su Nombre aqui..." tabindex="1" >                        
-              </div>
+        <section class="left">
+          <div class="form-group">
+            <label for="firstname" class="form__label">Nombre:</label>
+            <input class="form-input" size="30" type="text" id="firstname" name="firstname" placeholder="Ingrese su Nombre aqui..."
+              tabindex="1">
+          </div>
 
-              <div class="form-group">
-                <label for="address" class="form__label" >Direccion:</label>
-                <input type="text" id ="address" name="address" placeholder="Ingrese su dirección aqui..." tabindex="3"/>                        
-              </div>
+          <div class="form-group">
+            <label for="address" class="form__label">Direccion:</label>
+            <input class="form-input" type="text" id="address" name="address" placeholder="Ingrese su dirección aqui..." tabindex="3" />
+          </div>
 
-              <div class="form-group">
-                <label for="country" class="form__label" >Pais:</label>
-                <input type="text" id="country" name="country" placeholder="Ingrese su pais aqui..." tabindex="5"/>                        
-              </div>
+          <div class="form-group">
+            <label for="country" class="form__label">Pais:</label>
+            <input class="form-input" type="text" id="country" name="country" placeholder="Ingrese su pais aqui..." tabindex="5" />
+          </div>
 
-              <div class="form-group">
-                <label for="telefono" >Telefono: </label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su telefono aqui ...." tabindex="7"/>
-              </div>
+          <div class="form-group">
+            <label for="telefono">Telefono: </label>
+            <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="Ingrese su telefono aqui ...." tabindex="7" />
+          </div>
 
-            </section>
-            <section class="right">
-                  <div class="form-group">
-                    <label for="lastname" class="form__label"  >Apellido:</label>
-                    <input size="30" type="text" id ="lastname" name="lastname" placeholder="Ingrese su apellido aqui..." tabindex="2"/>                        
-                  </div>
-                  <div class="form-group">
-                    <label for="zipcode">Código Postal:</label>
-                    <input type="text" id= "zipcode"  name="zipcode" placeholder="Ingrese su codigo postal aqui..." tabindex="4"/>               
-                  </div>         
-                  <div class="form-group">
-                    <label for="dateofbirth">Fecha Nacimiento:</label>
-                    <input type="date" name="dateofbirth" tabindex="6"  required/>               
-                  </div>                         
-                  <div class="form-group">
-                    <label for="emails">Email: </label>
-                    <input type="email" id="emails" name="emails" placeholder="Ingrese su email aqui ...." required placeholder="Email" tabindex="8"/>
-                  </div>                 
-            </sections>  
+          <div class="form-group">
+            <label for="select" class="form__label">Seleccione:</label>
+            <select name="select" id="select">
+              <option value="value1">Shampoo</option>
+              <option value="value2">Locion</option>
+              <option value="value3">Desodorante</option>
+            </select>
+          </div>
+
+        </section>
+        <section class="right">
+          <div class="form-group">
+            <label for="lastname" class="form__label">Apellido:</label>
+            <input class="form-input" size="30" type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido aqui..."
+              tabindex="2" />
+          </div>
+          <div class="form-group">
+            <label for="zipcode">Código Postal:</label>
+            <input class="form-input" type="text" id="zipcode" name="zipcode" placeholder="Ingrese su codigo postal aqui..."
+              tabindex="4" />
+          </div>
+          <div class="form-group">
+            <label for="dateofbirth">Fecha Nacimiento:</label>
+            <input class="form-input" type="date" name="dateofbirth" tabindex="6" required />
+          </div>
+          <div class="form-group">
+            <label for="emails">Email: </label>
+            <input class="form-input" type="email" id="emails" name="emails" placeholder="Ingrese su email aqui ...." required
+              placeholder="Email" tabindex="8" />
+          </div>
+
+
+          <div class="form-checkbox">
+            <label class="checkbox" for="checkbox">Quiere recibir las novedades? </label>
+            <input class="custom-checkbox" type="checkbox" id="yes" name="opciones" value="Si">
+            Si
+          </label>
+          <br>
+          <label class="checkbox" for="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="no" name="opciones" value="No">
+             No
+          </div>
+          </sections>
 
       </div>
       <div class="form-bottom">
-        <label class="form--label" for="comentarios">Comentarios:</label> 
-        <textarea class="form--input--textarea" id="comentarios"  name="comentarios" tabindex="9"> </textarea>  
+        <label class="form--label" for="comentarios">Comentarios:</label>
+        <textarea class="form--input--textarea" id="comentarios" name="comentarios" tabindex="9"> </textarea>
         <br>
-        <input id="submit" id=submitsuscripcion name="submitsuscripcion" type="submit" value="Enviar" required tabindex="10"/>
-    </div>    
-  </form>
+        <input id="submit" id=submitsuscripcion name="submitsuscripcion" type="submit" value="Enviar" required
+          tabindex="10" />
+      </div>
+    </form>
 
-</div>
+  </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('dateForm');
-  const fechaNacimiento = document.getElementById('dateofbirth');
-  const dateError = document.getElementById('dateError');
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('dateForm');
+      const fechaNacimiento = document.getElementById('dateofbirth');
+      const dateError = document.getElementById('dateError');
 
-  form.addEventListener('submit', function (event) {
-      event.preventDefault();
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-      const selectedDate = new Date(fechaNacimiento.value);
-      const currentYear = new Date().getFullYear();
-      const minYear = currentYear - 1900;
+        const selectedDate = new Date(fechaNacimiento.value);
+        const currentYear = new Date().getFullYear();
+        const minYear = currentYear - 1900;
 
-      if (selectedDate.getFullYear() < minYear) {
+        if (selectedDate.getFullYear() < minYear) {
           dateError.textContent = 'La fecha de nacimiento debe ser posterior a 1900.';
-      } else {
+        } else {
           dateError.textContent = '';
           // Aquí puedes enviar el formulario
           form.submit();
-      }
-  });
-});
-</script>
+        }
+      });
+    });
+  </script>
 
   <footer class="footer">
     <div class="contenedor">
