@@ -11,9 +11,7 @@ html {
   font-family: "montserrat", sans-serif;
   scroll-behavior: smooth;
 }
-h2{
 
-}
 a {
   text-decoration: none;
 }
@@ -35,7 +33,7 @@ img {
 p {
   color: black;
   font-size: 1.2rem;
-  margin-top: 5px;
+  margin-top: 0.5rem;
   line-height: 2.5rem;
   font-weight: 300;
   letter-spacing: 0.05rem;
@@ -45,7 +43,7 @@ p {
   font-size: 4rem;
   font-weight: 300;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
@@ -60,9 +58,11 @@ p {
   text-transform: uppercase;
   color: white;
 }
+
 .logo h1 span {
   color: #ff8d29;
 }
+
 /* Header seccion */
 #header {
   position: fixed;
@@ -72,11 +72,13 @@ p {
   width: 100vw;
   height: auto;
 }
+
 #header .header {
   min-height: 8vh;
   background-color: #383838;
   transition: 0.3s ease background-color;
 }
+
 #header .nav-bar {
   display: flex;
   align-items: center;
@@ -84,8 +86,9 @@ p {
   width: 100%;
   height: 100%;
   max-width: 1300px;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
+
 #header .nav-list ul {
   list-style: none;
   position: absolute;
@@ -102,9 +105,11 @@ p {
   overflow-x: hidden;
   transition: 0.5s ease left;
 }
+
 #header .nav-list ul.active {
   left: 0%;
 }
+
 #header .nav-list ul a {
   font-size: 2.5rem;
   font-weight: 450;
@@ -112,7 +117,7 @@ p {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 2rem;
   display: block;
 }
 
@@ -124,20 +129,23 @@ p {
   transform: translate(-50%, -50%) scale(0);
   color: #383838;
   font-size: 13rem;
-  letter-spacing: 50px;
+  letter-spacing: 5rem;
   z-index: -1;
   transition: 0.3s ease letter-spacing;
 }
+
 #header .nav-list ul li:hover a::after {
   transform: translate(-50%, -50%) scale(1);
   letter-spacing: initial;
 }
+
 #header .nav-list ul li:hover a {
   color: #ff8d29;
 }
+
 #header .hamburger {
-  height: 60px;
-  width: 60px;
+  height: 6rem;
+  width: 6rem;
   display: inline-block;
   border: 3px solid white;
   border-radius: 50%;
@@ -148,24 +156,27 @@ p {
   z-index: 100;
   cursor: pointer;
   transform: scale(0.8);
-  margin-right: 20px;
+  margin-right: 2rem;
 }
+
 #header .hamburger:after {
   position: absolute;
   content: "";
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 0.3rem solid white;
   animation: hamburger_puls 1s ease infinite;
 }
+
 #header .hamburger .nav-bar {
-  height: 2px;
-  width: 30px;
+  height: 0.2rem;
+  width: 3rem;
   position: relative;
   background-color: white;
   z-index: -1;
 }
+
 #header .hamburger .nav-bar::after,
 #header .hamburger .nav-bar::before {
   content: "";
@@ -177,18 +188,23 @@ p {
   transition: 0.3s ease;
   transition-property: top, bottom;
 }
+
 #header .hamburger .nav-bar::after {
-  top: 8px;
+  top: 0.8rem;
 }
+
 #header .hamburger .nav-bar::before {
-  bottom: 8px;
+  bottom: 0.8rem;
 }
+
 #header .hamburger.active .nav-bar::before {
   bottom: 0;
 }
+
 #header .hamburger.active .nav-bar::after {
   top: 0;
 }
+
 /* fin Header */
 
 /* banner Seccion */
@@ -202,6 +218,7 @@ p {
   max-width: 100vw;
   display: block;
 }
+
 #banner_cuidadofacial {
   background-image: url(../imagenes/banner/cuidadofacial.jpg);
   background-size: cover;
@@ -241,6 +258,7 @@ p {
   position: relative;
   z-index: -1;
 }
+
 #banner_contacto {
   background-image: url(../imagenes/banner/mundo.png);
   background-size: cover;
@@ -248,6 +266,7 @@ p {
   position: relative;
   z-index: -1;
 }
+
 #banner_suscripcion {
   background-image: url(../imagenes/banner/inscripciones.jpg);
   background-color: black;
@@ -268,6 +287,7 @@ p {
   opacity: 0.5;
   z-index: -1;
 }
+
 #banner_cuidadofacial::after {
   content: "";
   position: absolute;
@@ -279,6 +299,7 @@ p {
   opacity: 0.5;
   z-index: -1;
 }
+
 #banner_higiene::after {
   content: "";
   position: absolute;
@@ -314,6 +335,7 @@ p {
   opacity: 0.5;
   z-index: -1;
 }
+
 #banner_vitaLift::after {
   content: "";
   position: absolute;
@@ -327,9 +349,9 @@ p {
 }
 
 #banner .hero {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 5rem;
   justify-content: flex-start;
 }
 
@@ -346,28 +368,34 @@ video {
   height: 100%;
   object-fit: cover;
 }
+
 /* fin banner seccion */
 
 /*seccion boxes*/
 #boxes {
-  margin-top: 60px;
+  margin-top: 6rem;
+  justify-content: center;
+  margin-bottom: 6rem;
 }
+
 .contenedor {
   width: 80%;
   margin: auto;
 }
+
 #boxes .contenedor h2 {
-  font-size: 50px;
+  font-size: 5rem;
   margin: 0;
-  padding-top: 30px;
-  letter-spacing: 4px;
+  padding-top: 3rem;
+  letter-spacing: 0.4rem;
   text-align: center;
   color: black;
   font-family: "Montserrat";
 }
+
 #boxes .contenedor p {
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 2rem;
+  line-height: 3.5rem;
   padding: 2% 0;
   font-family: "Montserrat";
   text-align: center;
@@ -380,16 +408,18 @@ video {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 5rem;
 }
+
 div.galeria img {
-  width: 300px;
-  height: 250px;
+  width: 30rem;
+  height: 25rem;
   object-fit: contain;
 }
+
 div.pie {
   text-align: center;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 div.contenedor_productos_barba {
@@ -400,24 +430,24 @@ div.contenedor_productos_barba {
 }
 
 div.galeria_barba img {
-  margin: 10px 10px;
-  width: 600px;
-  padding: 40px;
+  margin: 1rem 1rem;
+  width: 60rem;
+  padding: 4rem;
   position: relative;
 }
 
 /*boton comprar*/
 .boton a {
-  padding: 8px 49px;
+  padding: 0.8rem 4.9rem;
   background-color: black;
   color: #ffffff;
   text-decoration: none;
   font-family: "Montserrat";
-  border-radius: 20px;
+  border-radius: 2rem;
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 7px 67px;
+  margin: 0.7rem 6.7rem;
 }
 
 .boton a:hover {
@@ -433,22 +463,23 @@ div.galeria_barba img {
 }
 
 .boton_unirse a {
-  padding: 10px 40px;
+  padding: 1rem 4rem;
   background-color: black;
   color: #ffffff;
   text-decoration: none;
   font-family: "Montserrat";
-  font-size: 20px;
-  border-radius: 20px;
+  font-size: 2rem;
+  border-radius: 2rem;
   text-align: center;
 }
+
 .boton_unirse a:hover {
   color: orangered;
 }
 
 /*footer*/
 .contenedor {
-  max-width: 1170px;
+  max-width: 117rem;
   margin: auto;
 }
 
@@ -460,21 +491,22 @@ div.galeria_barba img {
 ul {
   list-style: none;
 }
+
 .footer {
   background-color: #383838;
-  padding: 70px 0px;
+  padding: 7rem 0rem;
 }
 
 .footer_col {
   width: 25%;
-  padding: 0px 15px;
+  padding: 0px 1.5rem;
 }
 
 .footer_col h4 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: white;
   text-transform: capitalize;
-  margin-bottom: 35px;
+  margin-bottom: 3.5rem;
   font-weight: 500;
   position: relative;
 }
@@ -483,19 +515,19 @@ ul {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -1rem;
   background-color: orangered;
-  height: 2px;
+  height: 1rem;
   box-sizing: border-box;
-  width: 50px;
+  width: 8rem;
 }
 
 .footer_col ul li:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .footer_col ul li a {
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: capitalize;
   color: white;
   text-decoration: none;
@@ -507,109 +539,154 @@ ul {
 
 .footer_col ul li a:hover {
   color: #ffffff;
-  padding-left: 8px;
+  padding-left: 0.8rem;
 }
 
 .footer_col figure a img {
   display: block;
-  height: 100px;
+  height: 10rem;
   width: auto;
-  margin-right: 0 10px 10px 0;
-  line-height: 40px;
+  margin-right: 0 1rem 1rem 0;
+  line-height: 4rem;
 }
+
 .redes_soc {
   float: right;
   display: inline;
-  padding: 0px 15px;
+  padding: 0px 1.5rem;
 }
+
 .redes_soc img {
-  max-width: 40px;
+  max-width: 4rem;
 }
 
 /*seccion contacto*/
 label {
   display: block;
-  margin-top: 20px;
-  letter-spacing: 1px;
-  font-size: 15px;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
   color: black;
 }
 
 #my-form {
-  margin-left: 20px;
-  margin-bottom: 20px;
+  padding: 1rem;
+  ;
+  border: #383838 solid 0.1rem;
+  width: 90vw;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  overflow: auto;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+#my-form input {
+  padding: 1rem;
+  ;
+  border: #383838 solid 0.1rem;
+  width: 20vw;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+#my-form textarea {
+  padding: 1rem;
+  ;
+  border: #383838 solid 0.1rem;
+  width: 20vw;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
 }
 
 iframe {
-  margin: 0 20px 20px 50px;
+  margin: 0 2rem 2rem 5rem;
 }
+
 .form-input,
 textarea {
-  width: 300px;
-  height: 27px;
+  width: 3rem;
+  height: 2.7rem;
   background: #383838;
-  border: 2px solid #f6f6f6;
-  padding: 10px;
-  margin-top: 5px;
-  font-size: 15px;
+  border: 0.2rem solid #f6f6f6;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   color: white;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
+
 .form-checkbox {
-    margin-top: 12px;
-    height: 8rem;
-    display: grid;
-    grid-template-areas:
-        "top top top top top top top top"
-        "bottom1 bottom2 bottom3 bottom4 bottom5 bottom6 bottom7 bottom8";
-    grid-auto-rows: 2rem 8rem;
-    align-items: center;
-    grid-auto-columns: 1fr;
+  margin-top: 1.2rem;
+  height: 8rem;
+  display: grid;
+  grid-template-areas:
+    "top top top top top top top top"
+    "bottom1 bottom2 bottom3 bottom4 bottom5 bottom6 bottom7 bottom8";
+  grid-auto-rows: 2rem 8rem;
+  align-items: center;
+  grid-auto-columns: 1fr;
 }
+
 .checkbox-label-top {
   grid-area: top;
 }
-.checkbox-input-bottom-1{
+
+.checkbox-input-bottom-1 {
   grid-area: bottom3;
 }
-#yes{
-    height: 2rem;
+
+#yes {
+  height: 2rem;
 }
-#no{
-    height: 2rem;
+
+#no {
+  height: 2rem;
 }
-.checbox-h3-bottom-2{
+
+.checbox-h3-bottom-2 {
   grid-area: bottom2;
 }
-.checkbox-input-bottom-3{
-    grid-area: bottom7;
+
+.checkbox-input-bottom-3 {
+  grid-area: bottom7;
 }
-.checbox-h3-bottom-4{
-    grid-area: bottom6;
+
+.checbox-h3-bottom-4 {
+  grid-area: bottom6;
 }
 
 #select {
-  width: 300px;
-  height: 50px;
+  width: 30vw;
+  height: 5rem;
   background: #383838;
-  border: 2px solid #f6f6f6;
-  padding: 10px;
-  margin-top: 5px;
-  font-size: 15px;
+  border: 0.2rem solid #f6f6f6;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   color: white;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 textarea {
-  height: 150px;
+  height: 15rem;
 }
+
 #submit {
-  width: 85px;
-  height: 35px;
+  width: 8.5rem;
+  height: 3.5rem;
   border: none;
-  margin-top: 20px;
+  margin-top: 2rem;
   cursor: pointer;
 }
+
 .social-icons li {
   vertical-align: top;
   display: inline;
@@ -617,11 +694,64 @@ textarea {
   padding: 0.5em;
 }
 
+/*pagina de contacto Form*/
+
+/* Centrar el formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.form-top .left {
+  padding-right: 5rem;
+}
+
+.form-top input {
+  height: 5rem;
+}
+
+.form-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.form-bottom .form--label {
+  width: 100%;
+}
+
+.form-bottom .form--input--textarea {
+  width: 100%;
+}
+
+div.form-group input {
+  width: 30vw;
+  height: 5rem;
+  background: #383838;
+  border: 0.2rem solid #f6f6f6;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 1rem;
+}
+
 @keyframes hamburger_puls {
   0% {
     opacity: 1;
     transform: scale(1);
   }
+
   100% {
     opacity: 0;
     transform: scale(1.5);
@@ -633,6 +763,7 @@ textarea {
     width: 100%;
     left: 0;
   }
+
   100% {
     width: 0;
     left: 100%;
@@ -645,43 +776,10 @@ textarea {
   }
 }
 
-/*pagina de contacto Form*/
-
-/* Centrar el formulario */
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
-}
-.form-top {
-  display: flex;
-  justify-content: space-around;
-}
-.form-top .left {
-  padding-right: 5rem;
-}
-.form-top input {
-  height: 5rem;
-}
-.form-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-.form-bottom .form--label {
-  width: 100%;
-}
-.form-bottom .form--input--textarea {
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 76.8rem) {
   .cta {
     font-size: 2.5rem;
-    padding: 20px 60px;
+    padding: 2rem 6rem;
   }
 
   h1 .section-title {
@@ -706,7 +804,7 @@ textarea {
   }
 
   #projects .projects-item {
-    height: 400px;
+    height: 40rem;
     margin: 0;
     width: 100%;
     border-radius: 0;
@@ -725,22 +823,22 @@ textarea {
   }
 
   #about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
+    width: 60rem;
+    height: 40rem;
+    padding-left: 6rem;
   }
 
   #about .col-left .about-img::after {
-    left: -45px;
-    top: 34px;
+    left: -4.5rem;
+    top: 3.4rem;
     height: 98%;
     width: 98%;
-    border: 10px solid crimson;
+    border: 1rem solid crimson;
   }
 
   #about .col-right {
     text-align: left;
-    padding: 30px;
+    padding: 3rem;
   }
 
   #about .col-right h1 {
@@ -749,7 +847,7 @@ textarea {
 
   #contact .contact {
     flex-direction: column;
-    padding: 100px 0;
+    padding: 10rem 0;
     align-items: center;
     justify-content: center;
     min-width: 20vh;
@@ -759,17 +857,17 @@ textarea {
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    padding: 2rem;
   }
 
   #contact .contact-items {
-    margin: 20px;
+    margin: 2rem;
     flex-direction: row;
   }
 
   #contact .contact-items .icons {
-    height: 80px;
-    width: 80px;
+    height: 8rem;
+    width: 8rem;
   }
 
   #contact .contact-items .icons img {
@@ -779,7 +877,7 @@ textarea {
   #contact .contact-items .contact-info {
     width: 100%;
     text-align: center;
-    padding-left: 20px;
+    padding-left: 2rem;
   }
 }
 
@@ -815,15 +913,16 @@ textarea {
 }
 
 /*responsive footer*/
-@media (max-width: 800px) {
+@media (max-width: 80rem) {
   .footer_col {
     width: 70%;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 60rem) {
   .column {
-    flex-basis: 100%; /* Cambia el ancho de las columnas a 100% en dispositivos pequeños */
+    flex-basis: 100%;
+    /* Cambia el ancho de las columnas a 100% en dispositivos pequeños */
   }
 }

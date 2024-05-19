@@ -51,27 +51,36 @@
   </section>
 
   <div class="row" id="boxes">
-        <!-- modify this form HTML and place wherever you want your form -->
-<form id="my-form" action="https://formspree.io/f/xvoywzpz" method="POST">
-  <label>Ingrese su nombre:</label>
-  <input id="nombre" name="nombre" placeholder="Nombre" required>
-  <label>Ingrese su mail:</label>
-  <input id="email" name="email" type="email" placeholder="ejemplo@email.com" required>
-  <!--<label>Telefono</label>
-  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required/>-->
-  <label>Mensaje:</label>
-  <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
-  
-  <br>
-    <input id="submit" name="submit" type="submit" value="Enviar" required>
-  </button>
-  
-  <p id="my-form-status"></p>
-</form>
-<!-- Place this script at the end of the body tag -->
-<script>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form id="my-form" action="https://formspree.io/f/xvoywzpz" method="POST">
+      <div class="">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13145.11833355628!2d-58.4585372!3d-34.5464759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffc6e9f1e0d8dacd!2sL&#39;Or%C3%A9al%20Argentina!5e0!3m2!1ses!2sar!4v1665522667443!5m2!1ses!2sar"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="">
+        <label>Ingrese su nombre:</label>
+        <input class="form-input" id="nombre" name="nombre" placeholder="Nombre" required>
+
+        <label>Ingrese su mail:</label>
+        <input class="form-input" id="email" name="email" type="email" placeholder="ejemplo@email.com" required>
+
+        <label>Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
+        <br>
+        <input id="submit" name="submit" type="submit" value="Enviar" required>
+        </button>
+        <p id="my-form-status"></p>
+    </form>
+  </div>
+  </div>
+
+  <!-- Place this script at the end of the body tag -->
+  <script>
     var form = document.getElementById("my-form");
-    
+
     async function handleSubmit(event) {
       event.preventDefault();
       var status = document.getElementById("my-form-status");
@@ -80,7 +89,7 @@
         method: form.method,
         body: data,
         headers: {
-            'Accept': 'application/json'
+          'Accept': 'application/json'
         }
       }).then(response => {
         if (response.ok) {
@@ -100,16 +109,7 @@
       });
     }
     form.addEventListener("submit", handleSubmit)
-</script>
-
-    </div>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13145.11833355628!2d-58.4585372!3d-34.5464759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffc6e9f1e0d8dacd!2sL&#39;Or%C3%A9al%20Argentina!5e0!3m2!1ses!2sar!4v1665522667443!5m2!1ses!2sar"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-  </div>
-
+  </script>
 
   <footer class="footer">
     <div class="contenedor">
