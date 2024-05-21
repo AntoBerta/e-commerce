@@ -1,16 +1,18 @@
-import { Subscription, checkLocalStorage } from './funciones.js';
+import { ValidarFormulario, Login, checkLocalStorage } from './funciones.js';
 //import { checkLocalStorage, expo } from './js/funciones';
 
-let formularios = document.getElementsByClassName("subscription-form");
+let formulario = document.getElementById("envio");
 
-let miFormulario = formularios[0];
+//let miFormulario = formularios[0];
+//miFormulario.onsubmit = ValidarFormulario
+//console.log(formularios);
 
-console.log(formularios);
+ formulario.onsubmit = ValidarFormulario
+
 
 if (checkLocalStorage()) {
-    miFormulario.display = 'none'
+    formulario.display = 'none'
 } else {
     //
 }
 
-miFormulario.onsubmit = Login

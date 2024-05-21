@@ -7,27 +7,34 @@
 
 */
 const ERROR_COLOR = "red";
+const VALID_COLOR = "green";
+const DEFAULT_EMPTY = "";
 const URL_LOGIN = "https://dummyjson.com/auth/login";
 
 function changeBorderColor(rgb, element) {
-    element.style.changeBorderColor = rgb;
+    element.style.borderColor = rgb;
 }
 
-function conexionBackEndApi() {
-    return Promise((resolve, reject) => {
+function conexionBackendAPI() {
+    return new Promise((resolve, reject) => {
 
         setTimeout(() => {
 
-            let fail = true > 0.5; // esto es aleatoria porque en realidad viene del backend
+            let fail = Math.random() > 0.5; // de prueba de forma aleatoria a veces es verdadero otras falso
+
             if (fail) {
-                reject("error fallo  irrecuperable")
+                reject("Error: fallo irrecuperable");
             } else {
-                resolve("finalizazion satifactoria")
+                resolve("Finalizacion satisfactoria");
             }
 
-        }, 2000)
+
+        }, 2000
+        )
+
     });
 }
+
 
 function isEmailValid(email) {
     //vamos a validar lo siguiente o las regular expresion
@@ -38,7 +45,7 @@ function isEmailValid(email) {
 
     let hasDotCom = email.endsWith(".com"); // este es el 4
 
-    let arrobaIndex = email.indexOPF("@");
+    let arrobaIndex = email.indexOf("@");
 
     // if arrobaIndex == 0 OR arrobaIndex === -1
     let arrobaIncorrecto = (arrobaIndex === 0) || (arrobaIndex === -1);
@@ -56,6 +63,7 @@ function isEmailValid(email) {
 }
 
 function requiredField(event) {
+    //tanga aun espacio
     if (element.value == null) {
         return false;
     } else {
@@ -64,20 +72,21 @@ function requiredField(event) {
 }
 
 export function ValidarFormulario(event) {
-    // console.log( event );
-    let miFormulario = event.currentTarget; // cuando el usuario hace un click desencadena un evento. 
+
+    event.preventDefault(); // que no se borren los archivos. a partir de este mom el comp. lo manejo yo
+    console.log(event);
+    let miFormulario = event.target; // cuando el usuario hace un click desencadena un evento. 
     let isValid = true;
+    //let isTelValid = true;
+    let contador = 0;
 
-
-    for (let index = 0; index < miFormulario.lenght; index++) {
+    for (let index = 0; index < miFormulario.length; index++) {
         const element = miFormulario[index];
         console.log(element);
 
-        element.preventDefault(event); // que no se borren los archivos. a partir de este mom el comp. lo manejo yo
-
         switch (element.type) {
             case "text":
-                isValid = requiredField(element.value);
+                // isValid = requiredField(element.value);
                 break;
             case "checkbox":
                 console.log("encontre un error");
@@ -85,40 +94,52 @@ export function ValidarFormulario(event) {
             case "email":
                 isValid = isEmailValid(element.value);
                 break;
+            case " tel":
+            //  isTelValid = isValidTelField(element.value);
             default:
-                console.log("Default...")
+                console.log("Default...");
                 break;
         }
 
         if (!isValid) {
             // podre emitir una alerta sobre el campo invalido
             //o cambiar el color
-            changeBorderColor(ERROR_COLOR, element.value);
+            changeBorderColor(ERROR_COLOR, element);
             //changeBorderColor(ERROR_COLOR, text);
-            break; // el fault se detiene
+            //break; // el fault se detiene
 
-        }
-        if (isValid) {
-
-            conexionBackEndApi() // aca puedo poner el fecth debo poner el fecthpara mandar data al backend
-                .then(() => alert("saliobien"))
-                .catch(() => alert("salio mal"))
-                .finally(() => alert("esto compilo"));
-
-            // mando TODO al backend
-            /*  setTimeout(() => {
-                  alert("data enviada")
-                    }, 5000); // 5000 ms = segundo
-                  } else {
-                      // ERROR hago otra cosa
-                  } */
         } else {
+            changeBorderColor(VALID_COLOR, element);
 
         }
+        contador ++;
+
     }
+    console.log(contador);
+    if ((isValid) && (contador == 13)) {
+        conexionBackendAPI()
+            .then(() => {
+                // Redirect the user upon 
+                alert("Salio bien");
+                window.location.href = "https://formspree.io/f/xvoywzpz";
+            })
+            .catch(() => {
+                // Alert the user if the API call fails
+                alert("Salio mal");
+            })
+            .finally(() => {
+                // This will execute regardless of the promise's outcome
+                alert("Esta completo");
+            });
+    } else {
+        // Handle the case when the condition is false
+        // You might want to alert the user or log an error here
+    }
+
+
 }
 
-export function Subscription(event) {
+export function Login(event) {
 
     event.preventDefault();
 
@@ -136,7 +157,8 @@ export function Subscription(event) {
     let data = {
 
         username: usernameHTMLElement.value,
-        password: passwwordHTMLElement.value
+        password: passwwordHTMLElement.value,
+        email: emailHTMLElement
     }
 
     //DATA es un objeto en javascript
@@ -183,6 +205,6 @@ export function checkLocalStorage() {
     let isLogged = localStorage.getItem("isLogged");
     let name = localStorage.getItem("name");
 
-    let existeDataPrevia = (name !== undefined) && (islogged !== undefined);
+    let existeDataPrevia = (name !== undefined) && (isLogged !== undefined);
     return existeDataPrevia;
 }

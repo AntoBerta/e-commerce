@@ -51,7 +51,9 @@
 
   <div class="form-container">
 
-    <form class="subscription-form" action="https://formspree.io/f/xvoywzpz" method="POST">
+    <!-- action="https://formspree.io/f/xvoywzpz" method="POST"-->
+
+    <form class="subscription-form" id="envio" method="POST" >
       <div class="form-top">
         <section class="left">
           <div class="form-group">
@@ -106,7 +108,7 @@
           <div class="form-group">
             <label for="emails">Email: </label>
             <input class="form-input" type="email" id="emails" name="emails" placeholder="Ingrese su email aqui ...."
-               placeholder="Email" tabindex="8" />
+              placeholder="Email" tabindex="8" />
           </div>
 
 
@@ -125,13 +127,12 @@
         <label class="form--label" for="comentarios">Comentarios:</label>
         <textarea class="form--input--textarea" id="comentarios" name="comentarios" tabindex="9"> </textarea>
         <br>
-        <input id="submit" id=submitsuscripcion name="submitsuscripcion" type="submit" value="Enviar" 
-          tabindex="10" />
+        <input id="submit" id=submitsuscripcion name="submitsuscripcion" type="submit" value="Enviar" tabindex="10" />
       </div>
     </form>
 
   </div>
-
+  <!-- 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.getElementById('dateForm');
@@ -155,7 +156,7 @@
       });
     });
   </script>
-
+-->
   <footer class="footer">
     <div class="contenedor">
       <div class="row">
@@ -203,8 +204,8 @@
   </footer>
 
   <script src="./js/app.js"></script>
-  <script src="./js/funciones.js"></script>
-  <script src="./js/suscripcion.js"></script>
+  <script type="module" src="./js/suscripcion.js"></script>
+
   <script src="https://kit.fontawesome.com/e4361d6d35.js" crossorigin="anonymous"></script>
 </body>
 
