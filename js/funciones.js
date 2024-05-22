@@ -72,21 +72,18 @@ function requiredField(event) {
 }
 
 export function ValidarFormulario(event) {
-
-    event.preventDefault(); // que no se borren los archivos. a partir de este mom el comp. lo manejo yo
+    event.preventDefault();
     console.log(event);
-    let miFormulario = event.target; // cuando el usuario hace un click desencadena un evento. 
+    let miFormulario = event.target;
     let isValid = true;
-    //let isTelValid = true;
     let contador = 0;
 
     for (let index = 0; index < miFormulario.length; index++) {
         const element = miFormulario[index];
-        console.log(element);
 
         switch (element.type) {
             case "text":
-                // isValid = requiredField(element.value);
+                //isValid = requiredField(element.value);
                 break;
             case "checkbox":
                 console.log("encontre un error");
@@ -95,7 +92,7 @@ export function ValidarFormulario(event) {
                 isValid = isEmailValid(element.value);
                 break;
             case " tel":
-            //  isTelValid = isValidTelField(element.value);
+                //isTelValid = isValidTelField(element.value);
             default:
                 console.log("Default...");
                 break;
@@ -110,33 +107,23 @@ export function ValidarFormulario(event) {
 
         } else {
             changeBorderColor(VALID_COLOR, element);
-
         }
-        contador ++;
-
+        contador++;
     }
-    console.log(contador);
-    if ((isValid) && (contador == 13)) {
+
+    if (isValid && contador === 13) {
         conexionBackendAPI()
             .then(() => {
-                // Redirect the user upon 
                 alert("Salio bien");
                 window.location.href = "https://formspree.io/f/xvoywzpz";
             })
             .catch(() => {
-                // Alert the user if the API call fails
                 alert("Salio mal");
             })
             .finally(() => {
-                // This will execute regardless of the promise's outcome
                 alert("Esta completo");
             });
-    } else {
-        // Handle the case when the condition is false
-        // You might want to alert the user or log an error here
     }
-
-
 }
 
 export function Login(event) {
