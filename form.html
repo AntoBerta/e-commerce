@@ -12,7 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
   <title>Formulario</title>
-
 </head>
 
 <body>
@@ -35,7 +34,6 @@
               <li><a href="higiene.html" class="actual" data-after="Higiene">Higiene</a></li>
               <li><a href="barber-club.html" data-after="Barber">Barber Club</a></li>
               <li><a href="contacto.html" data-after="Contacto">Contacto</a></li>
-
             </ul>
           </div>
         </div>
@@ -45,118 +43,84 @@
 
   <section id="banner_suscripcion">
     <div class="hero container">
-
     </div>
   </section>
 
   <div class="form-container">
-
-    <!-- action="https://formspree.io/f/xvoywzpz" method="POST"-->
-
-    <form class="subscription-form" id="envio" method="POST" >
+    <form class="subscription-form" id="envio" method="POST">
       <div class="form-top">
         <section class="left">
           <div class="form-group">
             <label for="firstname" class="form__label">Nombre:</label>
-            <input class="form-input" size="30" type="text" id="firstname" name="firstname"
-              placeholder="Ingrese su Nombre aqui..." tabindex="1">
+            <input class="form-input" size="30" type="text" id="firstname" name="firstname" placeholder="Ingrese su Nombre aqui..." tabindex="1">
           </div>
 
           <div class="form-group">
-            <label for="address" class="form__label">Direccion:</label>
-            <input class="form-input" type="text" id="address" name="address" placeholder="Ingrese su dirección aqui..."
-              tabindex="3" />
+            <label for="address" class="form__label">Dirección:</label>
+            <input class="form-input" type="text" id="address" name="address" placeholder="Ingrese su dirección aqui..." tabindex="3" />
           </div>
 
           <div class="form-group">
-            <label for="country" class="form__label">Pais:</label>
-            <input class="form-input" type="text" id="country" name="country" placeholder="Ingrese su pais aqui..."
-              tabindex="5" />
+            <label for="country" class="form__label">País:</label>
+            <input class="form-input" type="text" id="country" name="country" placeholder="Ingrese su país aqui..." tabindex="5" />
           </div>
 
           <div class="form-group">
-            <label for="telefono">Telefono: </label>
-            <input class="form-input" type="tel" id="telefono" name="telefono"
-              placeholder="Ingrese su telefono aqui ...." tabindex="7" />
+            <label for="telefono">Teléfono:</label>
+            <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono aqui..." tabindex="7" />
           </div>
 
           <div class="form-group">
             <label for="select" class="form__label">Seleccione:</label>
             <select name="select" id="select">
               <option value="value1">Shampoo</option>
-              <option value="value2">Locion</option>
+              <option value="value2">Loción</option>
               <option value="value3">Desodorante</option>
             </select>
           </div>
-
         </section>
+
         <section class="right">
           <div class="form-group">
             <label for="lastname" class="form__label">Apellido:</label>
-            <input class="form-input" size="30" type="text" id="lastname" name="lastname"
-              placeholder="Ingrese su apellido aqui..." tabindex="2" />
+            <input class="form-input" size="30" type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido aqui..." tabindex="2" />
           </div>
           <div class="form-group">
             <label for="zipcode">Código Postal:</label>
-            <input class="form-input" type="text" id="zipcode" name="zipcode"
-              placeholder="Ingrese su codigo postal aqui..." tabindex="4" />
+            <input class="form-input" type="text" id="zipcode" name="zipcode" placeholder="Ingrese su código postal aqui..." tabindex="4" />
           </div>
           <div class="form-group">
             <label for="dateofbirth">Fecha Nacimiento:</label>
             <input class="form-input" type="date" name="dateofbirth" tabindex="6" />
           </div>
           <div class="form-group">
-            <label for="emails">Email: </label>
-            <input class="form-input" type="email" id="emails" name="emails" placeholder="Ingrese su email aqui ...."
-              placeholder="Email" tabindex="8" />
+            <label for="emails">Email:</label>
+            <input class="form-input" type="email" id="emails" name="emails" placeholder="Ingrese su email aqui..." tabindex="8" />
           </div>
 
-
-          <div class="form-checkbox ">
-            <label class="checkbox-label-top" for="checkbox">Quiere recibir las novedades? </label>
-            <input class="checkbox-input-bottom-1" type="checkbox" id="yes" name="opciones" value="Si">
-            <h3 class="checbox-h3-bottom-2">Si</h3>
-            </label>
-            <input class="checkbox-input-bottom-3" type="checkbox" id="no" name="opciones" value="No">
-            <h3 class="checbox-h3-bottom-4">No</h3>
+          <div class="form-checkbox">
+            <label class="checkbox-label-top" for="checkbox">¿Quiere recibir las novedades?</label>
+            <div>
+              <input class="checkbox-input-bottom-1" type="checkbox" id="yes" name="opciones" value="Si">
+              <label for="yes" class="checkbox-label">Sí</label>
+            </div>
+            <div>
+              <input class="checkbox-input-bottom-3" type="checkbox" id="no" name="opciones" value="No">
+              <label for="no" class="checkbox-label">No</label>
+            </div>
           </div>
-          </sections>
-
+        </section>
       </div>
+
       <div class="form-bottom">
         <label class="form--label" for="comentarios">Comentarios:</label>
-        <textarea class="form--input--textarea" id="comentarios" name="comentarios" tabindex="9"> </textarea>
+        <textarea class="form--input--textarea" id="comentarios" name="comentarios" tabindex="9"></textarea>
         <br>
-        <input id="submit" id=submitsuscripcion name="submitsuscripcion" type="submit" value="Enviar" tabindex="10" />
+        <input id="submit" name="submitsuscripcion" type="submit" value="Enviar" tabindex="10" />
       </div>
     </form>
-
   </div>
-  <!-- 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const form = document.getElementById('dateForm');
-      const fechaNacimiento = document.getElementById('dateofbirth');
-      const dateError = document.getElementById('dateError');
 
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const selectedDate = new Date(fechaNacimiento.value);
-        const currentYear = new Date().getFullYear();
-        const minYear = currentYear - 1900;
-
-        if (selectedDate.getFullYear() < minYear) {
-          dateError.textContent = 'La fecha de nacimiento debe ser posterior a 1900.';
-        } else {
-          dateError.textContent = '';
-          // Aquí puedes enviar el formulario
-          form.submit();
-        }
-      });
-    });
-  </script>
--->
   <footer class="footer">
     <div class="contenedor">
       <div class="row">
@@ -165,8 +129,7 @@
           <ul>
             <li><a href="#">Antonela Lucia Bertarini</a></li>
             <li><a href="#">Sebastian De Pasqua</a></li>
-            <li><a href="#">Jose Rubio </a></li>
-
+            <li><a href="#">Jose Rubio</a></li>
           </ul>
         </div>
         <div class="footer_col">
@@ -176,35 +139,24 @@
           </ul>
         </div>
         <div class="footer_col">
-          <h4>Catedra</h4>
+          <h4>Cátedra</h4>
           <ul>
-            <li><a href="#">Codo a Codo 4.0 - Comision-24122</a></li>
+            <li><a href="#">Codo a Codo 4.0 - Comisión-24122</a></li>
             <li><a href="#">Prof. Alejandro Medici</a></li>
           </ul>
         </div>
       </div>
     </div>
-    </div>
     <div class="redes_soc">
-      <a href="https://es-la.facebook.com/lorealmenexpert/" target="_blank" rel="noopener noreferer"><img
-          src="imagenes/redes/fa.png" alt="icono facebook"></a>
-    </div>
-    <div class="redes_soc">
-      <a href="https://twitter.com/lorealmenexpert?lang=es" target="_blank" rel="noopener noreferer"><img
-          src="imagenes/redes/tw.png" alt="icono twitter"></a>
-    </div>
-    <div class="redes_soc">
-      <a href="https://www.youtube.com/user/lorealparisargentina" target="_blank" rel="noopener noreferer"><img
-          src="imagenes/redes/you.png" alt="icono youtube"></a>
-    </div>
-    <div class="redes_soc">
-      <a href="https://www.instagram.com/lorealmenexpertunofficial/?hl=es" target="_blank" rel="noopener noreferer"><img
-          src="imagenes/redes/ins.png" alt="icono instagram"></a>
+      <a href="https://es-la.facebook.com/lorealmenexpert/" target="_blank" rel="noopener noreferrer"><img src="imagenes/redes/fa.png" alt="icono facebook"></a>
+      <a href="https://twitter.com/lorealmenexpert?lang=es" target="_blank" rel="noopener noreferrer"><img src="imagenes/redes/tw.png" alt="icono twitter"></a>
+      <a href="https://www.youtube.com/user/lorealparisargentina" target="_blank" rel="noopener noreferrer"><img src="imagenes/redes/you.png" alt="icono youtube"></a>
+      <a href="https://www.instagram.com/lorealmenexpertunofficial/?hl=es" target="_blank" rel="noopener noreferrer"><img src="imagenes/redes/ins.png" alt="icono instagram"></a>
     </div>
   </footer>
 
-  <script src="./js/app.js" type="module"></script>
-  <script src="./js/suscripcion.js" type="module"></script>
+  <script src="./js/app.js"></script>
+  <script type="module" src="./js/suscripcion.js"></script>
   <script src="https://kit.fontawesome.com/e4361d6d35.js" crossorigin="anonymous"></script>
 </body>
 

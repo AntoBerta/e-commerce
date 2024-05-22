@@ -4,7 +4,7 @@ const formulario = document.getElementById("envio");
 
 formulario?.addEventListener("submit", ValidarFormulario);
 
-if (checkLocalStorage() && formulario) {
+/*if (checkLocalStorage() && formulario) {
     formulario.style.display = 'none';
-}
+}*/
 
