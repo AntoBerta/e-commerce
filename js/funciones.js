@@ -62,21 +62,14 @@ function isEmailValid(email) {
 
 }
 
-function requiredField(event) {
-    //tanga aun espacio
-    if (element.value == null) {
-        return false;
-    } else {
-        return true;
-    }
-}
+
 
 export function ValidarFormulario(event) {
 
     event.preventDefault(); // que no se borren los archivos. a partir de este mom el comp. lo manejo yo
     console.log(event);
     let miFormulario = event.target; // cuando el usuario hace un click desencadena un evento. 
-    let isValid = true;
+    let isValid = false;
     //let isTelValid = true;
     let contador = 0;
 
@@ -86,57 +79,85 @@ export function ValidarFormulario(event) {
 
         switch (element.type) {
             case "text":
-                // isValid = requiredField(element.value);
+                if (element.value == "") {
+                    isValid = false;
+                    changeBorderColor(ERROR_COLOR, element);
+                } else {
+                    isValid = true;
+                    changeBorderColor(VALID_COLOR, element);
+                }
                 break;
             case "checkbox":
-                console.log("encontre un error");
+                if (element.value == "") {
+                    isValid = false;
+                    changeBorderColor(ERROR_COLOR, element);
+                } else {
+                    isValid = true;
+                    changeBorderColor(VALID_COLOR, element);
+                }
                 break;
             case "email":
-                isValid = isEmailValid(element.value);
+                if (element.value == "") {
+                    isValid = false;
+                    changeBorderColor(ERROR_COLOR, element);
+                } else {
+                    isValid = true;
+                    changeBorderColor(VALID_COLOR, element);
+                }
+                //isValid = isEmailValid(element.value);
                 break;
             case " tel":
-            //  isTelValid = isValidTelField(element.value);
+                if (element.value == "") {
+                    isValid = false;
+                    changeBorderColor(ERROR_COLOR, element);
+                } else {
+                    isValid = true;
+                    changeBorderColor(VALID_COLOR, element);
+                }
+                //  isTelValid = isValidTelField(element.value);
+                break;
+            case "textarea":
+                if (element.value == " ") {
+                    isValid = false;
+                    changeBorderColor(ERROR_COLOR, element);
+                } else {
+                    isValid = true;
+                    changeBorderColor(VALID_COLOR, element);
+                }
             default:
                 console.log("Default...");
                 break;
         }
 
-        if (!isValid) {
-            // podre emitir una alerta sobre el campo invalido
-            //o cambiar el color
-            changeBorderColor(ERROR_COLOR, element);
-            //changeBorderColor(ERROR_COLOR, text);
-            //break; // el fault se detiene
+        if (isValid) {
+            //changeBorderColor(VALID_COLOR, element);
+            contador++;
+            if (contador === 13){
 
+                conexionBackendAPI()
+                    .then(() => {
+                        // Redirect the user upon 
+                        alert("Suscripcion satisfactoria");
+                        /*window.location.href = "https://formspree.io/f/xvoywzpz";*/
+                    })
+                    .catch(() => {
+                        // Alert the user if the API call fails
+                        alert("Los datos no son correctos");
+                    })
+                /*.finally(() => {
+                    // This will execute regardless of the promise's outcome
+                    alert("Esta completo");
+                });*/
+            } else {
+                // Handle the case when the condition is false
+                // You might want to alert the user or log an error here
+
+            }
         } else {
-            changeBorderColor(VALID_COLOR, element);
-
+            //changeBorderColor(VALID_COLOR, element);
         }
-        contador ++;
 
     }
-    console.log(contador);
-    if ((isValid) && (contador == 13)) {
-        conexionBackendAPI()
-            .then(() => {
-                // Redirect the user upon 
-                alert("Salio bien");
-                window.location.href = "https://formspree.io/f/xvoywzpz";
-            })
-            .catch(() => {
-                // Alert the user if the API call fails
-                alert("Salio mal");
-            })
-            .finally(() => {
-                // This will execute regardless of the promise's outcome
-                alert("Esta completo");
-            });
-    } else {
-        // Handle the case when the condition is false
-        // You might want to alert the user or log an error here
-    }
-
-
 }
 
 export function Login(event) {
