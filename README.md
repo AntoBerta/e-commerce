@@ -1,4 +1,4 @@
-# **Ecommerce**
+# **e-commerce**
  Codo a Codo 4.0 / 2024 -  Node.js - Full Stack 
  
 ***
