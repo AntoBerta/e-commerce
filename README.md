@@ -1,15 +1,15 @@
 # **Ecommerce**
+ Codo a Codo 4.0 / 2024 -  Node.js - Full Stack 
+ 
 ***
-Codo a Codo 4.0 2024 - Grupo 15 
-
- Comision 24122  -  Node.js - Full Stack 
 
 ## Pagina para venta de productos.
-***
+Comision 24122  -  Grupo 15 
 Autores: 
-     * Jose Rubio
-     * Sebastian De Pasqua
-     * Antonela Bertarini.
+>* Jose Rubio
+>>* Sebastian De Pasqua
+>>* Antonela Bertarini.
 
+```
 # code block
-print npm start 
+print 'npm start' 
