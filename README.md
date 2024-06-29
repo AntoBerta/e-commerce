@@ -5,10 +5,10 @@
 
 ## Pagina para venta de productos.
 Comision 24122  -  Grupo 15 
-Autores: 
->* Jose Rubio
->>* Sebastian De Pasqua
->>* Antonela Bertarini.
+>Autores: 
+>>* Jose Rubio
+>>>* Sebastian De Pasqua
+>>>>* Antonela Bertarini.
 
 ```
 # code block
