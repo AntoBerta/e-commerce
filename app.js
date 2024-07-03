@@ -1,4 +1,5 @@
-/*const express = require('express');
+/*
+const express = require('express');
 const app = express();
 
 const port = 3000;
@@ -17,4 +18,23 @@ app.get('admin/create', (req, res) => {
 });
 
 */
+const express = require('express');
 
+const saludoRoutes= require('./routes/saludoRoutes');
+const usersRoutes= require('./routes/usersRoutes');
+const userRoutes= require('./routes/userRoutes');
+
+const PORT = 3000;
+const app = express();
+
+
+app.use("/saludo",saludoRoutes);
+
+app.use("/users",usersRoutes)
+
+app.use("/users",userRoutes)
+
+
+app.listen( PORT,() => {
+    console.log ("server running at port: " + PORT);
+});
