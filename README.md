@@ -14,3 +14,4 @@ Comision 24122  -  Grupo 15
 # code block
 print 'npm start' 
 print node -v
+print npm -v
