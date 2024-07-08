@@ -1,18 +1,9 @@
 
 const express= require ("express");
 const router= express.Router();
-//const db= requiere('../db/db')
-
-router.get ("/list",(request,response)=> {
-    response.send ("respuesta lista de usuarios WIP....");
-});
+const usersController=require ('../controller/usersController');
 
 
-
-/*
-app.get("/users/list",(request,response) => {
-    response.send("respuesta lista de usuarios WIP...")
-});
-*/
+router.get ("/list",usersController.allUsers);
 
 module.exports = router;
