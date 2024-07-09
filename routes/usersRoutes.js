@@ -1,7 +1,7 @@
 
 const express= require ("express");
 const router= express.Router();
-//const db= requiere('../db/db')
+const db= require('../db/db');
 
 router.get ("/list",(request,response)=> {
     response.send ("respuesta lista de usuarios WIP....");

@@ -32,7 +32,7 @@ app.use("/saludo",saludoRoutes);
 
 app.use("/users",usersRoutes)
 
-app.use("/users",userRoutes)
+app.use("/user",userRoutes)
 
 
 app.listen( PORT,() => {
