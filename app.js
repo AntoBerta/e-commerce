@@ -1,38 +1,32 @@
-/*
 const express = require('express');
-const app = express();
-
-const port = 3000;
-app.get("/index", (req, res) =>{
-    res.send('Hola Mundo');
-});
-
-app.listen(port, () => {
-    console.log(`Example app listening`+`at http://localhost:${port}`);
-});
-
-app.use(express.static('public'));
-
-app.get('admin/create', (req, res) => {
-    res.sendFile(__dirname + './create.html')
-});
-
-*/
-const express = require('express');
-
-const saludoRoutes= require('./routes/saludoRoutes');
-const userRoutes= require('./routes/userRoutes');
+const saludoRoutes = require('./routes/saludoRoutes');
+const usersRoutes = require('./routes/usersRoutes');
+const userRoutes = require('./routes/userRoutes');
+const uploadRoutes = require('./routes/uploadRoutes');
+const authRoutes = require('./routes/authRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+const cors = require('cors')
 
 const PORT = 3000;
+
 const app = express();
 
+app.use(cors()); // Aca permito todas las conexiones o sea Access-Control-Allow-Origin = '*'
 
-app.use("/saludo",saludoRoutes);
+app.use(express.json());
 
-/*app.use("/users",usersRoutes);*/
-app.use("/user",userRoutes);
+app.use("/auth", authRoutes);
 
+app.use("/saludo", saludoRoutes);
 
-app.listen( PORT,() => {
-    console.log ("server running at port: " + PORT);
+app.use("/users", usersRoutes);
+
+app.use("/user", userRoutes);
+
+app.use("/upload", uploadRoutes);
+
+app.use("/contact", contactRoutes);
+
+app.listen( PORT, () => {
+    console.log("Server running at port: " + PORT);
 });
