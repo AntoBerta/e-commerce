@@ -1,18 +1,18 @@
-
 const express= require ("express");
 const router= express.Router();
-const db= require('../db/db');
+const db = require('../db/db');
+
 
 router.get ("/list",(request,response)=> {
-    response.send ("respuesta lista de usuarios WIP....");
+ 
+
+
+       const sql = 'SELECT * FROM bt_suscriptores';
+       db.query(sql, (err, result) => {
+           if (err) throw err;
+           response.send(result);       
+       });
+  
+  // module.exports = { allUsers };
 });
 
-
-
-/*
-app.get("/users/list",(request,response) => {
-    response.send("respuesta lista de usuarios WIP...")
-});
-*/
-
-module.exports = router;
