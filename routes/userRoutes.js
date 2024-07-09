@@ -1,12 +1,11 @@
-const express= require ("express");
-const router= express.Router();
+const express = require('express');
+const router = express.Router();
+const usersController = require('../controller/usersController')
+const authMiddleware = require('../middleware/authMiddleware');
 
+// Obtiene una lista de usuario..
+router.get("/list",usersController.allUsers );
 
-
-
-router.get("/:id",(req,res   ) => { 
-    const id= req.params.id;
-    response.send("respuesta de informacion de usuario con ID especializado WIP...")
-});
 
 module.exports = router;
+
