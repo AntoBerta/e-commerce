@@ -1,16 +1,25 @@
 {
   "name": "e-commerce",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Codo a Codo 4.0 2024 - Grupo 15",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "starts": "nodemon app.js"
+    "start": "node --watch --env-file=.env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntoBerta/e-commerce.git"
+  },
+  "keywords": [
+    "Node.js"
+  ],
+  "author": "Anto Berta, Seba De Pasqua, Jose Rubio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AntoBerta/e-commerce/issues"
+  },
+  "homepage": "https://github.com/AntoBerta/e-commerce#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -25,3 +34,6 @@
     "nomen": "^0.0.1"
   }
 }
+
+    
+

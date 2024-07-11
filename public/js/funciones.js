@@ -9,7 +9,10 @@
 const ERROR_COLOR = "red";
 const VALID_COLOR = "green";
 const DEFAULT_EMPTY = "";
-const URL_LOGIN = "https://dummyjson.com/auth/login";
+/*const URL_LOGIN = "https://dummyjson.com/auth/login";*/
+const URL_LOGIN = "http://localhost:3000/auth/login"; //"https://dummyjson.com/auth/login";
+const URL_CONTACT = "http://localhost:3000/contact";
+
 
 function changeBorderColor(rgb, element) {
     element.style.borderColor = rgb;
@@ -17,8 +20,30 @@ function changeBorderColor(rgb, element) {
 
 function conexionBackendAPI() {
     return new Promise((resolve, reject) => {
+        /// preparo un json para enviar al backend...
+        let data = {
+            "email":"devappbert@gmail.com",
+            "type": "venta de producto",
+            "text": "Quiero saber sobre su producto, que precio tiene?"
+        }
 
-        setTimeout(() => {
+        //DATA es un objeto en javascript
+
+        // Request necesita convertir ese objeto en JSON...
+        let request = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }
+
+
+        fetch( URL_CONTACT , request )
+        .then((respuesta) => respuesta.json() )
+        .then( (res) => {
+            // Este res es la promesa de convertir la respuesta en json
+            console.log(res);
+        });
+       /* setTimeout(() => {
 
             let fail = Math.random() > 0.5; // de prueba de forma aleatoria a veces es verdadero otras falso
 
@@ -30,7 +55,7 @@ function conexionBackendAPI() {
 
 
         }, 2000
-        )
+        )*/
 
     });
 }
@@ -194,10 +219,10 @@ export function Login(event) {
 
     //https://dummyjson.com/
     //usrio valido = kminchelle@qq.com pass:0lelplR
-    fetch(URL_LOGIN, request) // aca puedo poner el fecth debo poner el fecthpara mandar data al backend
+    fetch(URL_CONTACT, request) // aca puedo poner el fecth debo poner el fecthpara mandar data al backend
         .then((res) => res.json())
         .then((res => {
-            console.log();
+            console.log(res);
             //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
             if (res.hasOwnProperty("message")) {
@@ -210,7 +235,9 @@ export function Login(event) {
                 localStorage.setItem("name", res.firstName);
                 localStorage.setItem("isLogged", 'true');
 
-                //si esta todo bien guardo todo en el local storahge
+                //si esta todo bien guardo todo en el local storage
+                //deberiamos guardar el token aca. 
+                //localStorage.setItem("toke", 'token');
             }
         }))
         .catch(() => alert("salio mal"))

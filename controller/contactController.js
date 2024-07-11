@@ -5,7 +5,7 @@ const resend = new Resend.Resend(process.env.RESEND);
 
 const contact = async (request, response) => {
     const { email } = request.body;
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({ //podira ser sync (await)
         from: 'Acme <onboarding@resend.dev>',
         to: [email],
         subject: 'Hello World',

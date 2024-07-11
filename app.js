@@ -17,13 +17,13 @@ app.use(express.json());
 
 app.use("/auth", authRoutes);
 
-app.use("/saludo", saludoRoutes);
+/*app.use("/saludo", saludoRoutes);*/
 
 app.use("/users", usersRoutes);
 
 app.use("/user", userRoutes);
 
-app.use("/upload", uploadRoutes);
+/*app.use("/upload", uploadRoutes);*/
 
 app.use("/contact", contactRoutes);
 

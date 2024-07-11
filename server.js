@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 const moviesRouter = require('./routes/movies');
 
@@ -10,4 +10,4 @@ const PORT = 3000;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-});
+});*/

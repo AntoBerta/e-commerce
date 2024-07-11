@@ -12,7 +12,7 @@ const profileUser = (req, res) => {
 
 const getUser = (req, res) => {
     const id = req.params.id; // OJO con este parametro...
-    const sql = 'SELECT * FROM users WHERE idUser=' + id;
+    const sql = 'SELECT * FROM Users WHERE idUser=' + id;
     db.query(sql, (err, result) => {
         if (err) throw err;
         res.send(result);        
@@ -27,7 +27,7 @@ const createUser = (req, res) => {
 
     const {username, email, gender, age, maidenName,lastName,avatarURL}= dataRequest ;
 
-    const sql = 'INSERT INTO `practica001`.`users` (`username`, `email`, `gender`, `age`, `maidenName`, `lastName`, `avatarURL`) VALUES (?, ?, ?, ?, ?, ?, ?);'
+    const sql = 'INSERT INTO `dbweb`.`Users` (`username`, `email`, `gender`, `age`, `maidenName`, `lastName`, `avatarURL`) VALUES (?, ?, ?, ?, ?, ?, ?);'
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
         if (err) throw err;
         res.send(result);        
@@ -44,7 +44,7 @@ const updateUser = (req, res) => {
     // si no tengo todos los paramatros arrojar error... o no hacer nada..
     //UPDATE `practica001`.`users` SET `username` = 'Alejandro' WHERE (`idUser` = '10');
     // decidir como lo vamos a hacer si todos o de a uno... 
-    const sql = 'UPDATE `practica001`.`users` SET `username` = ?, `email` = ?, `gender` = ?, `age` =?, `maidenName` = ?,`lastName` = ?,`avatarURL` = ? WHERE idUser=' + id;
+    const sql = 'UPDATE `dbweb`.`Users` SET `username` = ?, `email` = ?, `gender` = ?, `age` =?, `maidenName` = ?,`lastName` = ?,`avatarURL` = ? WHERE idUser=' + id;
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
         if (err) throw err;
         res.send(result);        
