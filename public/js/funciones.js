@@ -159,20 +159,20 @@ export function ValidarFormulario(event) {
             contador++;
             if (contador === 13){
 
-                conexionBackendAPI()
-                    .then(() => {
-                        // Redirect the user upon 
-                        alert("Suscripcion satisfactoria");
-                        /*window.location.href = "https://formspree.io/f/xvoywzpz";*/
-                    })
-                    .catch(() => {
-                        // Alert the user if the API call fails
-                        alert("Los datos no son correctos");
-                    })
-                /*.finally(() => {
-                    // This will execute regardless of the promise's outcome
-                    alert("Esta completo");
-                });*/
+                conexionBackendAPI();
+          /*          .then(() => {
+          //              // Redirect the user upon 
+          //              alert("Suscripcion satisfactoria");
+          //              /*window.location.href = "https://formspree.io/f/xvoywzpz";*/
+          //          })
+          //          .catch(() => {
+          //             // Alert the user if the API call fails
+          //              alert("Los datos no son correctos");
+          //         })
+          //      /*.finally(() => {
+          //          // This will execute regardless of the promise's outcome
+          //          alert("Esta completo");
+          //      });
             } else {
                 // Handle the case when the condition is false
                 // You might want to alert the user or log an error here

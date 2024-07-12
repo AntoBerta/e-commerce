@@ -12,7 +12,7 @@ const profileUser = (req, res) => {
 
 const getUser = (req, res) => {
     const id = req.params.id; // OJO con este parametro...
-    const sql = 'SELECT * FROM Users WHERE idUser=' + id;
+    const sql = 'SELECT * FROM `dbweb`.`Users` WHERE idUser=' + id;
     db.query(sql, (err, result) => {
         if (err) throw err;
         res.send(result);        
@@ -54,14 +54,16 @@ const updateUser = (req, res) => {
 
 const deleteUser = (req, res) => {
     const id = req.params.id; // OJO con este parametro...
-    const sqlIDFavorito = 'SELECT idFavoritos FROM practica001.favoritos where Users_idUser='+id;
+    const sqlIDFavorito  = 'SELECT * FROM `dbweb`.`Users` WHERE idUser=' + id;
+    
     db.query(sqlIDFavorito, (err, result) => {
         if (err) throw err;
-        const idFavorito = result[0]; // pasar a string...
-        const sqlDeletePeliculas = 'DELETE FROM practica001.peliculas WHERE Favoritos_idFavoritos=' + idFavorito +  ' and Favoritos_Users_idUser=' + id;
-        const sqlDeleteFavoritos =  'DELETE from practica001.favoritos WHERE Users_idUser=' + id;
-        const sqlDeleteUser = 'DELETE from practica001.users WHERE idUser='+id;
-        const sql = sqlDeletePeliculas + ';' + sqlDeleteFavoritos + ';' + sqlDeleteUser ;
+      //  const idFavorito = result[0]; // pasar a string...
+      //  const sqlDeletePeliculas = 'DELETE FROM dbweb.Peliculas WHERE Favoritos_idFavoritos=' + idFavorito +  ' and Favoritos_Users_idUser=' + id;
+      //  const sqlDeleteFavoritos =  'DELETE from dbweb.Favoritos WHERE Users_idUser=' + id;
+        const sqlDeleteUser = 'DELETE from `dbweb`.`Users` WHERE idUser='+id;
+      //  const sql = sqlDeletePeliculas + ';' + sqlDeleteFavoritos + ';' + sqlDeleteUser ;
+       const sql = sqlDeleteUser;
         db.query(sql, (err, result) => {
             if (err) throw err;
             res.send(result);        
