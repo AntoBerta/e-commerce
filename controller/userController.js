@@ -12,7 +12,7 @@ const profileUser = (req, res) => {
 
 const getUser = (req, res) => {
     const id = req.params.id; // OJO con este parametro...
-    const sql = 'SELECT * FROM `dbweb`.`Users` WHERE idUser=' + id;
+    const sql = 'SELECT * FROM `l-commerce_anto_ssh`.`Users` WHERE idUser=' + id;
     db.query(sql, (err, result) => {
         if (err) throw err;
         res.send(result);        
@@ -27,7 +27,7 @@ const createUser = (req, res) => {
 
     const {username, email, gender, age, maidenName,lastName,avatarURL}= dataRequest ;
 
-    const sql = 'INSERT INTO `dbweb`.`Users` (`username`, `email`, `gender`, `age`, `maidenName`, `lastName`, `avatarURL`) VALUES (?, ?, ?, ?, ?, ?, ?);'
+    const sql = 'INSERT INTO `l-commerce_anto_ssh`.`Users` (`username`, `email`, `gender`, `age`, `maidenName`, `lastName`, `avatarURL`) VALUES (?, ?, ?, ?, ?, ?, ?);'
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
         if (err) throw err;
         res.send(result);        
@@ -44,7 +44,7 @@ const updateUser = (req, res) => {
     // si no tengo todos los paramatros arrojar error... o no hacer nada..
     //UPDATE `practica001`.`users` SET `username` = 'Alejandro' WHERE (`idUser` = '10');
     // decidir como lo vamos a hacer si todos o de a uno... 
-    const sql = 'UPDATE `dbweb`.`Users` SET `username` = ?, `email` = ?, `gender` = ?, `age` =?, `maidenName` = ?,`lastName` = ?,`avatarURL` = ? WHERE idUser=' + id;
+    const sql = 'UPDATE `l-commerce_anto_ssh`.`Users` SET `username` = ?, `email` = ?, `gender` = ?, `age` =?, `maidenName` = ?,`lastName` = ?,`avatarURL` = ? WHERE idUser=' + id;
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
         if (err) throw err;
         res.send(result);        
@@ -54,14 +54,14 @@ const updateUser = (req, res) => {
 
 const deleteUser = (req, res) => {
     const id = req.params.id; // OJO con este parametro...
-    const sqlIDFavorito  = 'SELECT * FROM `dbweb`.`Users` WHERE idUser=' + id;
+    const sqlIDFavorito  = 'SELECT * FROM `l-commerce_anto_ssh`.`Users` WHERE idUser=' + id;
     
     db.query(sqlIDFavorito, (err, result) => {
         if (err) throw err;
       //  const idFavorito = result[0]; // pasar a string...
-      //  const sqlDeletePeliculas = 'DELETE FROM dbweb.Peliculas WHERE Favoritos_idFavoritos=' + idFavorito +  ' and Favoritos_Users_idUser=' + id;
-      //  const sqlDeleteFavoritos =  'DELETE from dbweb.Favoritos WHERE Users_idUser=' + id;
-        const sqlDeleteUser = 'DELETE from `dbweb`.`Users` WHERE idUser='+id;
+      //  const sqlDeletePeliculas = 'DELETE FROM l-commerce_anto_ssh.Peliculas WHERE Favoritos_idFavoritos=' + idFavorito +  ' and Favoritos_Users_idUser=' + id;
+      //  const sqlDeleteFavoritos =  'DELETE from l-commerce_anto_ssh.Favoritos WHERE Users_idUser=' + id;
+        const sqlDeleteUser = 'DELETE from `l-commerce_anto_ssh`.`Users` WHERE idUser='+id;
       //  const sql = sqlDeletePeliculas + ';' + sqlDeleteFavoritos + ';' + sqlDeleteUser ;
        const sql = sqlDeleteUser;
         db.query(sql, (err, result) => {

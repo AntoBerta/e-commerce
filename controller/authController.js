@@ -23,10 +23,10 @@ const register =  (request, response) => {
     const sql = 'INSERT INTO `dbweb`.`Users` (`username`, `email`, `gender`, `age`, `maidenName`, `lastName`, `avatarURL`) VALUES (?, ?, ?, ?, ?, ?, ?);'
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
         if (err) throw err;
-        response.send(result);        
+        //response.send(result);        
     });
 
-    response.status(200).send( { auth:true, token});
+    response.status(200).send({auth:true, token});
 };
 
 module.exports = { register };
