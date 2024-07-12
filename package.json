@@ -4,7 +4,7 @@
   "description": "Codo a Codo 4.0 2024 - Grupo 15",
   "main": "app.js",
   "scripts": {
-    "start": "node --watch --env-file=.env app.js",
+    "start": "node --watch --env-file=.env server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,7 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "jason": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.10.2",
@@ -34,6 +35,3 @@
     "nomen": "^0.0.1"
   }
 }
-
-    
-
